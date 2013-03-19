@@ -1,4 +1,10 @@
-var express = require('express'), routes = require('./routes'), mongoose = require('mongoose'), db = mongoose.connect('mongodb://localhost/node_todos'), Schema = mongoose.Schema, ObjectId = Schema.ObjectId, Todo = require('./models/todo.js').make(Schema, mongoose);
+var express = require('express'),
+	routes = require('./routes'),
+	mongoose = require('mongoose'),
+	db = mongoose.connect('mongodb://localhost/node_todos'),
+	Schema = mongoose.Schema,
+	ObjectId = Schema.ObjectId,
+	Todo = require('./models/todo.js').make(Schema, mongoose);
 
 var app = module.exports = express.createServer();
 
